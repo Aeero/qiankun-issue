@@ -8,6 +8,8 @@ import './index.less';
 import render from './render/ReactRender';
 // import render from './render/VueRender';
 
+// delete window.globalThis;
+
 /**
  * Step1 初始化应用（可选）
  */
@@ -63,6 +65,13 @@ registerMicroApps(
       loader,
       activeRule: '/vue3',
     },
+    {
+      name: 'issue',
+      entry: '//localhost:7107',
+      container: '#subapp-viewport',
+      loader,
+      activeRule: '/issue',
+    },
   ],
   {
     beforeLoad: [
@@ -104,7 +113,11 @@ setDefaultMountApp('/react16');
 /**
  * Step4 启动应用
  */
-start();
+start({
+  sandbox: {
+    speedy: true,
+  }
+});
 
 runAfterFirstMounted(() => {
   console.log('[MainApp] first app mounted');

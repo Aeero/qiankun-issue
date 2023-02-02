@@ -46,6 +46,8 @@
     "start:angular9": "cd examples/angular9 && yarn serve:qiankun",
     "install:purehtml": "cd examples/purehtml && yarn",
     "start:purehtml": "cd examples/purehtml && yarn start",
+    "install:issue": "cd examples/issue && yarn",
+    "start:issue": "cd examples/issue && yarn start",
     "install:vue3": "cd examples/vue3 && yarn",
     "start:vue3": "cd examples/vue3 && yarn start",
     "build": "father-build",
