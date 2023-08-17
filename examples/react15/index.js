@@ -9,11 +9,14 @@ import App from './App';
 import './index.css';
 import './public-path';
 
-export async function bootstrap() {
+
+
+
+async function bootstrap() {
   console.log('[react15] react app bootstraped');
 }
 
-export async function mount(props = {}) {
+async function mount(props = {}) {
   console.log('[react15] props from main framework', props);
   const { container } = props;
   ReactDOM.render(
@@ -33,7 +36,7 @@ export async function mount(props = {}) {
   }, 2000);
 }
 
-export async function unmount(props) {
+async function unmount(props) {
   const { container } = props;
   ReactDOM.unmountComponentAtNode(
     container ? container.querySelector('#react15Root') : document.getElementById('react15Root'),
@@ -43,3 +46,12 @@ export async function unmount(props) {
 if (!window.__POWERED_BY_QIANKUN__) {
   bootstrap().then(mount);
 }
+
+
+(global => {
+  global['purehtml'] = {
+    bootstrap,
+    mount,
+    unmount,
+  };
+})(window);

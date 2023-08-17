@@ -1,4 +1,4 @@
-import 'zone.js'; // for angular subapp
+// import 'zone.js'; // for angular subapp
 import { initGlobalState, registerMicroApps, runAfterFirstMounted, setDefaultMountApp, start } from '../../es';
 import './index.less';
 /**
@@ -29,40 +29,40 @@ registerMicroApps(
       activeRule: '/react16',
     },
     {
-      name: 'react15',
+      name: 'react16-2',
       entry: '//localhost:7102',
       container: '#subapp-viewport',
       loader,
-      activeRule: '/react15',
+      activeRule: '/react16-2',
     },
-    {
-      name: 'vue',
-      entry: '//localhost:7101',
-      container: '#subapp-viewport',
-      loader,
-      activeRule: '/vue',
-    },
-    {
-      name: 'angular9',
-      entry: '//localhost:7103',
-      container: '#subapp-viewport',
-      loader,
-      activeRule: '/angular9',
-    },
-    {
-      name: 'purehtml',
-      entry: '//localhost:7104',
-      container: '#subapp-viewport',
-      loader,
-      activeRule: '/purehtml',
-    },
-    {
-      name: 'vue3',
-      entry: '//localhost:7105',
-      container: '#subapp-viewport',
-      loader,
-      activeRule: '/vue3',
-    },
+    // {
+    //   name: 'vue',
+    //   entry: '//localhost:7101',
+    //   container: '#subapp-viewport',
+    //   loader,
+    //   activeRule: '/vue',
+    // },
+    // {
+    //   name: 'angular9',
+    //   entry: '//localhost:7103',
+    //   container: '#subapp-viewport',
+    //   loader,
+    //   activeRule: '/angular9',
+    // },
+    // {
+    //   name: 'purehtml',
+    //   entry: '//localhost:7104',
+    //   container: '#subapp-viewport',
+    //   loader,
+    //   activeRule: '/purehtml',
+    // },
+    // {
+    //   name: 'vue3',
+    //   entry: '//localhost:7105',
+    //   container: '#subapp-viewport',
+    //   loader,
+    //   activeRule: '/vue3',
+    // },
   ],
   {
     beforeLoad: [

@@ -15,11 +15,9 @@ module.exports = {
     overlay: { warnings: false, errors: true },
   },
   output: {
-    library: `${name}-[name]`,
-    libraryTarget: 'umd',
-    jsonpFunction: `webpackJsonp_${name}`,
+    filename: 'index.js',
   },
-  mode: 'development',
+  mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
